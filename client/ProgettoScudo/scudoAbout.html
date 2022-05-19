@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="stileScudo.css">
+  <script>
+    function menuOnClick() {                                                   /*taskbar*/
+      document.getElementById("menu-bar").classList.toggle("change");
+      document.getElementById("nav").classList.toggle("change");
+      document.getElementById("menu-bg").classList.toggle("change-bg");
+    }
+    
+  </script>
+  
+</head>
+</body>
+<div class="logo">
+  <h1>
+    <img src="animazLogoScudo.gif" alt="logoAnim" height="170" width="170" >          
+  </h1>
+
+</div>
+
+
+
+<div class="menu-bg" id="menu-bg"></div>
+    
+    <div>
+            <p>4FT-i</p><br>
+            <img class="box" src="foto4Ft-i.jpeg" alt="foto4Ft-i" height="40%" width="40%">
+        
+        
+        <p>Ruoli:</p>
+        <div class="txtAbout">
+            
+            <p><b>Styling</b>: Solivari, Resigotti, Bonzagni, Farinella, Bassi;</p>
+            <p><b>Codice Javascript</b>: Bettani, Ciaccio, De Dona, Pologruto, Perego;</p>
+            <p><b>Codice Python</b>: Rossetti, Buzhala, Sudati, Sintoni, Colonna;</p>
+            <p><b>Circuito</b>: Nespoli, Provenzi;</p>
+            <p><b>Bot Telegram</b>: Blanco, Simeone;</p>
+            <p><b>Video</b>: Alberti, Motta, Pisani;</p>
+            <p> <b>Presentazione</b>: Urru.</p>
+        </div>
+        
+        
+    </div>
+    <div class="flex-container">
+        
+
+      <div id="menu">
+        <div id="menu-bar" onclick="menuOnClick()">
+          <div id="bar1" class="bar"></div>
+          <div id="bar2" class="bar"></div>
+          <div id="bar3" class="bar"></div>
+        </div>
+        <nav class="nav" id="nav">
+          <ul>
+            <li><a href="scudoHome.html">Home</a></li>
+            <li><a href="scudoVideo.html">Video</a></li>
+            <li><a href="scudoAbout.html">About Us</a></li>
+            <li><a href="scudoTelegram.html">Telegram</a></li>
+            
+          </ul>
+        </nav> 
+      </div>
+
+</body>
+</html>
