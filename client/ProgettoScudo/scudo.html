@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="stileScudo.css">
+  <script>
+    function menuOnClick() {
+      document.getElementById("menu-bar").classList.toggle("change");
+      document.getElementById("nav").classList.toggle("change");
+      document.getElementById("menu-bg").classList.toggle("change-bg");
+    }
+  </script>
+  
+</head>
+</body>
+<div class="logo">
+  <h1>
+    <img class="animazione" src="animazLogoScudo.gif" alt="logoAnim" height="170" width="170" >
+  </h1>
+</div>
+
+
+
+<div class="menu-bg" id="menu-bg"></div>
+    
+    
+    <div class="flex-container">
+        
+        <div class="box">
+            <img src="temp.png" alt="logTemp" height="150" width="150"  title="Temperatura" class="img" >
+            <p class="value">Temp</p>
+            
+        </div>
+      
+      <div class="box">
+        <img class="umidita" src="umidita.png" alt="logUmidita" height="150" width="150"  title="Umidità" class="img">
+        <p class="value">Umidità</p>
+    </div>
+      
+      <div class="box">
+
+        <img src="luce.png" alt="logLuce" height="150" width="150"  title="Luce" class="img">
+        <p class="value">Luce</p>
+      </div>
+
+      </div>
+      <br><br><br><br><br><br><br><br>
+      <div><h1>VIDEO</h1>
+      </div>
+      <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/6zQVOT-cF6g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      
+
+      <div id="menu">
+        <div id="menu-bar" onclick="menuOnClick()">
+          <div id="bar1" class="bar"></div>
+          <div id="bar2" class="bar"></div>
+          <div id="bar3" class="bar"></div>
+        </div>
+        <nav class="nav" id="nav">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </nav> 
+      </div>
+
+</body>
+</html>
