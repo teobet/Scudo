@@ -6,15 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<div id="caca"></div>
 <body>
     <script type="module">
         import { getDb,getStorico,updating } from './api.js';
         console.log(getDb());
         console.log(getStorico());
         
+        const temperatura=document.getElementById("caca")
+        
+
+
         setInterval(() => {
-            console.log(updating);  
+            console.log(updating);
+            temperatura.innerHTML=updating  
         }, 1000);
+
+
+        
     </script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
-import {getFirestore,collection, getDocs,getDoc, setDoc, doc} from"https://www.gstatic.com/firebasejs/9.6.11/firebase-firestore.js";
+import {getFirestore,collection, getDoc, doc} from"https://www.gstatic.com/firebasejs/9.6.11/firebase-firestore.js";
 import credentials from "./credentials.js";
 
 
@@ -56,7 +56,7 @@ function getStorico(){
     for(let i=0;i<10;i++){
         let docData=doc(storico,i.toString());
         getDoc(docData).then(function(doc){
-            temp.push({temp:doc.data().temp,hum:doc.data().hum,light:doc.data().light});
+            temp.push({temp:doc.data().temp,hum:doc.data().hum,light:doc.data().light,time:doc.data().time});
         }
     );
     }
