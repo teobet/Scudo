@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="stileScudo.css">
+  <script>
+    function menuOnClick() {                                                   /*taskbar*/
+      document.getElementById("menu-bar").classList.toggle("change");
+      document.getElementById("nav").classList.toggle("change");
+      document.getElementById("menu-bg").classList.toggle("change-bg");
+    }
+    
+
+
+  </script>
+  <script type="module">
+
+    import {current, getStorico, updating} from "./src/api.js"
+    //updating: --> -1 not updating, 0 pending, 1 updating
+    //getStorio(): --> [{},{},{},...]
+    //getDb(): -->  {hum:10,temp:10,light:10}
+
+    const temp=document.getElementById("temp")
+    const hum=document.getElementById("hum")
+    const light=document.getElementById("light")
+
+    setInterval(() => {
+      /*farinella è bello :)*/
+      /*Grazie ti amo :)*/
+      /*console.log(getDb());*/
+      console.log(JSON.stringify(current));
+      hum.innerHTML=current.hum
+      temp.innerHTML=current.temp
+      light.innerHTML=current.light
+
+      if(updating==1){
+        document.getElementById("update").innerHTML="Updating!"
+        document.getElementById("update").style.backgroundColor="#2bd115"
+      }
+      else if(updating==0){
+        document.getElementById("update").innerHTML="Pending"
+        document.getElementById("update").style.backgroundColor="#d3d3d3"
+      }
+      else{
+        document.getElementById("update").innerHTML="Not updating!"
+        document.getElementById("update").style.backgroundColor="#f13312"
+      }
+      temperatura()
+    }, 1000);
+
+    /*funzione per cambiare immagine della temperatura in base a dei range di temperatura*/
+    function temperatura(){
+      if(current.temp==0){
+        document.getElementById("temperatura").src="./Temp/temp0%.gif"
+      }
+      else if(current.temp>0 && current.temp<10){
+        document.getElementById("temperatura").src="./Temp/temp25%.gif"
+      }
+      else if(current.temp>10 && current.temp<20){
+        document.getElementById("temperatura").src="./Temp/temp50%.gif"
+      }
+      else if(current.temp>20 && current.temp<40){
+        document.getElementById("temperatura").src="./Temp/temp75%.gif"
+      }
+      else if(current.temp>40){
+        document.getElementById("temperatura").src="./Temp/temp100%.gif"
+      }
+      else{
+        console.log("quanto cazzo di caldo hai in camera")
+      }
+
+    }
+
+    function umidita () {
+      
+    }
+    function luminosita () {
+      
+    }
+    luminosita()
+    lumidita()
+    
+    
+  </script>
+  
+</head>
+<body>
+<a href="scudoHome.html">
+  <div class="logo">
+    <h1>
+      <img class="animazione" src="animazLogoScudo.gif" alt="logoAnim" height="170" width="170">          
+    </h1>
+  </div>
+</a>
+
+
+<div class="update-container">
+  <div id="update">
+    4L
+  </div>
+</div>
+<div  class="flex-container">
+        
+  <a href="StTemp.html">
+    <div class="box">
+      <img id="temperatura" src="temp.png" alt="logTemp" height="150" width="150" class="img" >
+      <p >Temperatura</p>
+      <p ><span id="temp">d</span>°C</p> 
+    </div>
+  </a>
+ 
+  <a href="StHum.html">
+  <div class="box">
+    <img class="umidita" id="umidita" src="umidita.png" alt="logUmidita" height="150" width="150"  class="img">
+    <p>Umidità</p>
+    <p ><span id="hum">d</span>%</p> 
+  </div>
+</a>
+
+<a href="StLuce.html">
+<div class="box">
+  <img src="luce.png" id="luce" alt="logLuce" height="150" width="150" class="img">
+  <p>Luce</p>
+  <p><span id="light">d</span>%</p>
+</div>
+</a>
+
+
+</div>
+<br><br><br><br><br><br><br><br>
+
+
+
+
+<div class="menu-bg" id="menu-bg"></div>
+      <div id="menu">
+        <div id="menu-bar" onclick="menuOnClick()">
+          <div id="bar1" class="bar"></div>
+          <div id="bar2" class="bar"></div>
+          <div id="bar3" class="bar"></div>
+        </div>
+        <nav class="nav" id="nav">
+          <ul>
+            <li><a href="scudoHome.html">Home</a></li>
+            <li><a href="scudoVideo.html">Video</a></li>
+            <li><a href="scudoAbout.html">About Us</a></li>
+            <li><a href="scudoTelegram.html">Telegram</a></li>
+          </ul>
+        </nav> 
+      </div>
+
+</body>
+</html>
