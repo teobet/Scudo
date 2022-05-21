@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="stileScudo.css">
+  <script>
+    function menuOnClick() {                                                   /*taskbar*/
+      document.getElementById("menu-bar").classList.toggle("change");
+      document.getElementById("nav").classList.toggle("change");
+      document.getElementById("menu-bg").classList.toggle("change-bg");
+    }
+    
+
+  </script>
+  <script type="module">
+
+    import { current, getStorico, updating} from "./src/api.js"
+    //updating: --> -1 not updating, 0 pending, 1 updating
+    //getStorio(): --> [{},{},{},...]
+    //getDb(): -->  {hum:10,temp:10,light:10}
+
+    const temp=document.getElementById("temp")
+    const hum=document.getElementById("hum")
+    const light=document.getElementById("light")
+
+
+
+    setInterval(() => {
+      /*farinella è bello :)*/
+      /*Grazie ti amo :)*/
+      /*console.log(getDb());*/
+      console.log(JSON.stringify(current));
+      hum.innerHTML=current.hum+ "%"
+      temp.innerHTML=current.temp+"°C"
+      light.innerHTML=current.light+"%"
+      
+      if(updating==1){
+        document.getElementById("update").innerHTML="Updating!"
+        document.getElementById("update").style.backgroundColor="#2bd115"
+      }
+      else if(updating==0){
+        document.getElementById("update").innerHTML="Pending"
+        document.getElementById("update").style.backgroundColor="#d3d3d3"
+      }
+      else{
+        document.getElementById("update").innerHTML="Not updating!"
+        document.getElementById("update").style.backgroundColor="#f13312"
+      }
+      
+      temperatura()
+      umidita()
+      luminosita()
+
+    }, 1000);
+
+    /*funzione per cambiare immagine della temperatura in base a dei range di temperatura*/
+    function temperatura(){
+      if(current.temp==0){
+        document.getElementById("temperatura").src="./Temp/0.gif"
+      }
+      else if(current.temp>0 && current.temp<=10){
+        document.getElementById("temperatura").src="./Temp/25.gif"
+      }
+      else if(current.temp>10 && current.temp<=20){
+        document.getElementById("temperatura").src="./Temp/50.gif"
+      }
+      else if(current.temp>20 && current.temp<=40){
+        document.getElementById("temperatura").src="./Temp/75.gif"
+      }
+      else if(current.temp>40){
+        document.getElementById("temperatura").src="./Temp/100.gif"
+      }
+
+    }
+
+    function umidita () {
+      if(current.hum==0){
+        document.getElementById("umidita").src="./Umidita/0.gif"
+      }
+      else if(current.hum>0 && current.hum<=25){
+        document.getElementById("umidita").src="./Umidita/25.gif"
+      }
+      else if(current.hum>25 && current.hum<=50){
+        document.getElementById("umidita").src="./Umidita/50.gif"
+      }
+      else if(current.hum>50 && current.hum<=75){
+        document.getElementById("umidita").src="./Umidita/75.gif"
+      }
+      else if(current.hum>75){
+        document.getElementById("umidita").src="./Umidita/100.gif"
+      }
+    }
+    function luminosita () {
+      if(current.light==0){
+        document.getElementById("luce").src="./Luce/0.gif"
+      }
+      else if(current.light>0 && current.light<=25){
+        document.getElementById("luce").src="./Luce/25.gif"
+      }
+      else if(current.light>25 && current.light<=50){
+        document.getElementById("luce").src="./Luce/50.gif"
+      }
+      else if(current.light>50 && current.light<=75){
+        document.getElementById("luce").src="./Luce/75.gif"
+      }
+      else if(current.light>75){
+        document.getElementById("luce").src="./Luce/100.gif"
+      }
+      
+    }
+    
+  </script>
+  
+</head>
+<body>
+<div class="mainPane">
+  <div class="logo">
+    <a href="index.html">
+          <img class="animazione" src="animazLogoScudo.gif" alt="logoAnim" height="170" width="170">          
+    </a>
+  </div>
+  
+  
+  <div class="update-container">
+    <div id="update">
+      ...
+    </div>
+  </div>
+  
+  <div  class="flex-container">
+          
+    <a href="StTemp.html" class="box">
+        <img id="temperatura" src="./Temp/100.gif" alt="logTemp" height="150" width="150" class="img" >
+        <p >Temperatura</p>
+        <p ><span id="temp"></span></p> 
+    </a>
+   
+    <a href="StHum.html" class="box">
+        <img class="umidita" id="umidita" src="./Umidita/100.gif" alt="logUmidita" height="150" width="150"  class="img">
+        <p>Umidità</p>
+        <p ><span id="hum"></span></p> 
+    </a>  
+  
+    <a href="StLuce.html" class="box">
+        <img src="./Luce/100.gif" id="luce" alt="logLuce" height="150" width="150" class="img">
+        <p>Luce</p>
+        <p><span id="light"></span></p>
+    </a>
+  
+  
+  </div>
+</div>
+
+
+<div class="menu-bg" id="menu-bg"></div>
+      <div id="menu">
+        <div id="menu-bar" onclick="menuOnClick()">
+          <div id="bar1" class="bar"></div>
+          <div id="bar2" class="bar"></div>
+          <div id="bar3" class="bar"></div>
+        </div>
+        <nav class="nav" id="nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="scudoVideo.html">Video</a></li>
+            <li><a href="scudoAbout.html">About Us</a></li>
+            <li><a href="scudoTelegram.html">Telegram</a></li>
+          </ul>
+        </nav> 
+      </div>
+
+</body>
+</html>  

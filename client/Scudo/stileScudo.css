@@ -1,8 +1,8 @@
 .logo{                          /*logo*/
     margin-left: auto;
     margin-right: auto;
-    display: flex;
-    justify-content: space-around;
+
+
        
 }
 
@@ -18,21 +18,30 @@
 
 }
 
+
+.mainPane{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100vh;
+}
+
+
 .flex-container{                /*contenitore info*/
   display: flex;
   margin: 0 auto;
-  justify-content: space-evenly;
+  justify-content: space-around;
   width: 70vw;
-  height: 20rem;
-  align-items: center;
-  margin-top: 150px;
+  align-items:center;
 
 }
 
+
 .box {
+  font-size: 3vh;
   background-color: rgb(211, 211, 211);           /*box info*/
   min-width: 12vw;
-  padding: 5rem; 
+  padding: 3rem;
   box-shadow: 10px 10px #6d6c6c;
   border-radius: 25px;
 
@@ -54,7 +63,8 @@
 }
 
 
-body{                                                   /*testo generale*/
+body{      
+    height: 100vh ;                                             /*testo generale*/
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 30px;
@@ -79,6 +89,7 @@ body{                                                   /*testo generale*/
     margin: 0 auto;
     justify-content: space-evenly;
     align-items: center;
+    margin: 1.5rem;
 }
 
 #update{
