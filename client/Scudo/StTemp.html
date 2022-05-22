@@ -8,10 +8,33 @@
       document.getElementById("menu-bg").classList.toggle("change-bg");
     }
     
-    
-    let temps = new Array
-    
   </script>
+
+  <script type="module">
+
+    import { current, getStorico, updating} from "./src/api.js"
+    let temps = new Array
+    temps = getStorico()
+
+    setInterval(() => {
+
+      zero.innerHTML = temps[0].time+" temperatura: "+temps[0].temp+"°C"
+      uno.innerHTML = temps[1].time+" temperatura: "+temps[1].temp+"°C"
+      due.innerHTML = temps[2].time+" temperatura: "+temps[2].temp+"°C"
+      tre.innerHTML = temps[3].time+" temperatura: "+temps[3].temp+"°C"
+      quat.innerHTML = temps[4].time+" temperatura: "+temps[4].temp+"°C"
+      cin.innerHTML = temps[5].time+" temperatura: "+temps[5].temp+"°C"
+      sei.innerHTML = temps[6].time+" temperatura: "+temps[6].temp+"°C"
+      set.innerHTML = temps[7].time+" temperatura: "+temps[7].temp+"°C"
+      ott.innerHTML = temps[8].time+" temperatura: "+temps[8].temp+"°C"
+      nov.innerHTML = temps[9].time+" temperatura: "+temps[9].temp+"°C"
+    
+      console.log(temps)
+    }, 1000);
+
+
+  </script>
+
   
 </head>
 <body>
@@ -25,7 +48,18 @@
 <p><h1>STORICO TEMPERATURA</h1></p>
   
   </div>
-  
+      <p><span id="zero"></span>
+      <p><span id="uno"></span>
+      <p><span id="due"></span>
+      <p><span id="tre"></span>
+      <p><span id="quat"></span> 
+      <p><span id="cin"></span>
+      <p><span id="sei"></span>
+      <p><span id="set"></span>
+      <p><span id="ott"></span>
+      <p><span id="nov"></span>
+      
+      
   </div>
 <br><br><br><br><br><br><br><br>
 
