@@ -9,10 +9,52 @@
     }
     
     
-    let temps = new Array
     
   </script>
-  
+  <script type="module">
+
+    import { current, getStorico, updating} from "./src/api.js"
+    let temps =[]
+    temps = getStorico()
+
+    setInterval(() => {
+
+      /*zero.innerHTML = temps[0].time+" umidità: "+temps[0].hum+"%"*/
+      zeroG.innerHTML=temps[0].time
+      zeroR.innerHTML=" umidità: "+temps[0].hum+"%"
+      unoG.innerHTML=temps[1].time
+      unoR.innerHTML=" umidità: "+temps[1].hum+"%"
+      dueG.innerHTML=temps[0].time
+      dueR.innerHTML=" umidità: "+temps[0].hum+"%"
+      treG.innerHTML=temps[0].time
+      treR.innerHTML=" umidità: "+temps[0].hum+"%"
+      quatG.innerHTML=temps[0].time
+      quatR.innerHTML=" umidità: "+temps[0].hum+"%"
+      cinG.innerHTML=temps[0].time
+      cinR.innerHTML=" umidità: "+temps[0].hum+"%"
+      seiG.innerHTML=temps[0].time
+      seiR.innerHTML=" umidità: "+temps[0].hum+"%"
+      setG.innerHTML=temps[0].time
+      setR.innerHTML=" umidità: "+temps[0].hum+"%"
+      ottG.innerHTML=temps[0].time
+      ottR.innerHTML=" umidità: "+temps[0].hum+"%"
+      novG.innerHTML=temps[0].time
+      novR.innerHTML=" umidità: "+temps[0].hum+"%"
+      /*
+      due.innerHTML = temps[2].time+" umidità: "+temps[2].hum+"%"
+      tre.innerHTML = temps[3].time+" umidità: "+temps[3].hum+"%"
+      quat.innerHTML = temps[4].time+" umidità: "+temps[4].hum+"%"
+      cin.innerHTML = temps[5].time+" umidità: "+temps[5].hum+"%"
+      sei.innerHTML = temps[6].time+" umidità: "+temps[6].hum+"%"
+      set.innerHTML = temps[7].time+" umidità: "+temps[7].hum+"%"
+      ott.innerHTML = temps[8].time+" umidità: "+temps[8].hum+"%"
+      nov.innerHTML = temps[9].time+" umidità: "+temps[9].hum+"%"*/
+    
+      console.log(temps)
+    }, 1000);
+
+
+  </script>
 </head>
 <body>
 <a href="index.html">
@@ -24,10 +66,49 @@
   </a>
 <p><h1>STORICO UMIDITA'</h1></p>
   
-  </div>
-  
-  </div>
-<br><br><br><br><br><br><br><br>
+<table class="tabella">
+  <tr>
+  </tr>
+  <tr >
+    <td><p id="zeroG"></p></td>
+    <td ><span id="zeroR"></span> </td>
+  </tr>
+  <tr >
+    <td><p id="unoG"></p></td>
+    <td ><span id="unoR"></span> </td>
+  </tr>
+  <tr >
+    <td><p id="dueG"></p></td>
+    <td ><span id="dueR"></span> </td>
+  </tr>
+  <tr >
+    <td><p id="treG"></p></td>
+    <td ><span id="treR"></span> </td>
+  </tr>
+  <tr >
+    <td><p id="quatG"></p></td>
+    <td ><span id="quatR"></span> </td>
+  </tr>
+  <tr >
+    <td><p id="cinG"></p></td>
+    <td ><span id="cinR"></span> </td>
+  </tr>
+  <tr >
+    <td><p id="seiG"></p></td>
+    <td ><span id="seiR"></span> </td>
+  </tr>
+  <tr >
+    <td><p id="setG"></p></td>
+    <td ><span id="setR"></span> </td>
+  </tr>
+  <tr >
+    <td><p id="ottG"></p></td>
+    <td ><span id="ottR"></span> </td>
+  </tr>
+  <tr >
+    <td><p id="novG"></p></td>
+    <td ><span id="novR"></span> </td>
+  </tr>
 
 
 

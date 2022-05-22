@@ -9,10 +9,52 @@
     }
     
     
-    let temps = new Array
     
   </script>
-  
+  <script type="module">
+
+    import { current, getStorico, updating} from "./src/api.js"
+    let temps =[]
+    temps = getStorico()
+
+    setInterval(() => {
+
+      /*zero.innerHTML = temps[0].time+" luce: "+temps[0].light+"%"*/
+      zeroG.innerHTML=temps[0].time
+      zeroR.innerHTML=" luce: "+temps[0].light+"%"
+      unoG.innerHTML=temps[1].time
+      unoR.innerHTML=" luce: "+temps[1].light+"%"
+      dueG.innerHTML=temps[0].time
+      dueR.innerHTML=" luce: "+temps[0].light+"%"
+      treG.innerHTML=temps[0].time
+      treR.innerHTML=" luce: "+temps[0].light+"%"
+      quatG.innerHTML=temps[0].time
+      quatR.innerHTML=" luce: "+temps[0].light+"%"
+      cinG.innerHTML=temps[0].time
+      cinR.innerHTML=" luce: "+temps[0].light+"%"
+      seiG.innerHTML=temps[0].time
+      seiR.innerHTML=" luce: "+temps[0].light+"%"
+      setG.innerHTML=temps[0].time
+      setR.innerHTML=" luce: "+temps[0].light+"%"
+      ottG.innerHTML=temps[0].time
+      ottR.innerHTML=" luce: "+temps[0].light+"%"
+      novG.innerHTML=temps[0].time
+      novR.innerHTML=" luce: "+temps[0].light+"%"
+      /*
+      due.innerHTML = temps[2].time+" luce: "+temps[2].light+"%"
+      tre.innerHTML = temps[3].time+" luce: "+temps[3].light+"%"
+      quat.innerHTML = temps[4].time+" luce: "+temps[4].light+"%"
+      cin.innerHTML = temps[5].time+" luce: "+temps[5].light+"%"
+      sei.innerHTML = temps[6].time+" luce: "+temps[6].light+"%"
+      set.innerHTML = temps[7].time+" luce: "+temps[7].light+"%"
+      ott.innerHTML = temps[8].time+" luce: "+temps[8].light+"%"
+      nov.innerHTML = temps[9].time+" luce: "+temps[9].light+"%"*/
+    
+      console.log(temps)
+    }, 1000);
+
+
+  </script>
 </head>
 <body>
     <a href="index.html">
@@ -24,10 +66,52 @@
       </a>
 <p><h1>STORICO LUCE</h1></p>
   
-  </div>
+<table class="tabella">
+  <tr>
+  </tr>
+  <tr >
+    <td><p id="zeroG"></p></td>
+    <td ><span id="zeroR"></span> </td>
+  </tr>
+  <tr >
+    <td><p id="unoG"></p></td>
+    <td ><span id="unoR"></span> </td>
+  </tr>
+  <tr >
+    <td><p id="dueG"></p></td>
+    <td ><span id="dueR"></span> </td>
+  </tr>
+  <tr >
+    <td><p id="treG"></p></td>
+    <td ><span id="treR"></span> </td>
+  </tr>
+  <tr >
+    <td><p id="quatG"></p></td>
+    <td ><span id="quatR"></span> </td>
+  </tr>
+  <tr >
+    <td><p id="cinG"></p></td>
+    <td ><span id="cinR"></span> </td>
+  </tr>
+  <tr >
+    <td><p id="seiG"></p></td>
+    <td ><span id="seiR"></span> </td>
+  </tr>
+  <tr >
+    <td><p id="setG"></p></td>
+    <td ><span id="setR"></span> </td>
+  </tr>
+  <tr >
+    <td><p id="ottG"></p></td>
+    <td ><span id="ottR"></span> </td>
+  </tr>
+  <tr >
+    <td><p id="novG"></p></td>
+    <td ><span id="novR"></span> </td>
+  </tr>
   
-  </div>
-<br><br><br><br><br><br><br><br>
+
+</table>
 
 
 

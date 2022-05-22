@@ -18,8 +18,28 @@
 
     setInterval(() => {
 
-      zero.innerHTML = temps[0].time+" temperatura: "+temps[0].temp+"°C"
-      uno.innerHTML = temps[1].time+" temperatura: "+temps[1].temp+"°C"
+      /*zero.innerHTML = temps[0].time+" temperatura: "+temps[0].temp+"°C"*/
+      zeroG.innerHTML=temps[0].time
+      zeroR.innerHTML=" temperatura: "+temps[0].temp+"°C"
+      unoG.innerHTML=temps[1].time
+      unoR.innerHTML=" temperatura: "+temps[1].temp+"°C"
+      dueG.innerHTML=temps[0].time
+      dueR.innerHTML=" temperatura: "+temps[0].temp+"°C"
+      treG.innerHTML=temps[0].time
+      treR.innerHTML=" temperatura: "+temps[0].temp+"°C"
+      quatG.innerHTML=temps[0].time
+      quatR.innerHTML=" temperatura: "+temps[0].temp+"°C"
+      cinG.innerHTML=temps[0].time
+      cinR.innerHTML=" temperatura: "+temps[0].temp+"°C"
+      seiG.innerHTML=temps[0].time
+      seiR.innerHTML=" temperatura: "+temps[0].temp+"°C"
+      setG.innerHTML=temps[0].time
+      setR.innerHTML=" temperatura: "+temps[0].temp+"°C"
+      ottG.innerHTML=temps[0].time
+      ottR.innerHTML=" temperatura: "+temps[0].temp+"°C"
+      novG.innerHTML=temps[0].time
+      novR.innerHTML=" temperatura: "+temps[0].temp+"°C"
+      /*
       due.innerHTML = temps[2].time+" temperatura: "+temps[2].temp+"°C"
       tre.innerHTML = temps[3].time+" temperatura: "+temps[3].temp+"°C"
       quat.innerHTML = temps[4].time+" temperatura: "+temps[4].temp+"°C"
@@ -27,7 +47,7 @@
       sei.innerHTML = temps[6].time+" temperatura: "+temps[6].temp+"°C"
       set.innerHTML = temps[7].time+" temperatura: "+temps[7].temp+"°C"
       ott.innerHTML = temps[8].time+" temperatura: "+temps[8].temp+"°C"
-      nov.innerHTML = temps[9].time+" temperatura: "+temps[9].temp+"°C"
+      nov.innerHTML = temps[9].time+" temperatura: "+temps[9].temp+"°C"*/
     
       console.log(temps)
     }, 1000);
@@ -38,15 +58,62 @@
   
 </head>
 <body>
-<a href="index.html">
-  <div class="logo">
-    <h1>
-      <img class="animazione" src="animazLogoScudo.gif" alt="logoAnim" height="170" width="170">          
-    </h1>
-  </div>
-</a>
-<p><h1>STORICO TEMPERATURA</h1></p>
-  
+    <a href="index.html">
+      <div class="logo">
+        <h1>
+          <img class="animazione" src="animazLogoScudo.gif" alt="logoAnim" height="170" width="170">          
+        </h1>
+      </div>
+    </a>
+    <h1 class="titolo">STORICO TEMPERATURA</h1>
+
+  <table class="tabella">
+    <tr>
+    </tr>
+    <tr >
+      <td><p id="zeroG"></p></td>
+      <td ><span id="zeroR"></span> </td>
+    </tr>
+    <tr >
+      <td><p id="unoG"></p></td>
+      <td ><span id="unoR"></span> </td>
+    </tr>
+    <tr >
+      <td><p id="dueG"></p></td>
+      <td ><span id="dueR"></span> </td>
+    </tr>
+    <tr >
+      <td><p id="treG"></p></td>
+      <td ><span id="treR"></span> </td>
+    </tr>
+    <tr >
+      <td><p id="quatG"></p></td>
+      <td ><span id="quatR"></span> </td>
+    </tr>
+    <tr >
+      <td><p id="cinG"></p></td>
+      <td ><span id="cinR"></span> </td>
+    </tr>
+    <tr >
+      <td><p id="seiG"></p></td>
+      <td ><span id="seiR"></span> </td>
+    </tr>
+    <tr >
+      <td><p id="setG"></p></td>
+      <td ><span id="setR"></span> </td>
+    </tr>
+    <tr >
+      <td><p id="ottG"></p></td>
+      <td ><span id="ottR"></span> </td>
+    </tr>
+    <tr >
+      <td><p id="novG"></p></td>
+      <td ><span id="novR"></span> </td>
+    </tr>
+    
+
+  </table>
+  <!--
   </div>
       <p><span id="zero"></span>
       <p><span id="uno"></span>
@@ -61,8 +128,7 @@
       
       
   </div>
-<br><br><br><br><br><br><br><br>
-
+-->
 
 
 
