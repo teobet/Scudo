@@ -94,8 +94,49 @@ body{
   font-weight: bold;
   margin: 0;
 }
-.presentazione{                                                /*video*/
+
+
+
+.link-block{
+
   display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  margin: 10vh auto;
+  width: 20vw;
+  aspect-ratio: 1;
+  padding: 2vh;
+
+  border-radius: 25px;
+  background-color: rgb(211, 211, 211);
+
+  transition: background-color 0.5s, color 0.5s;
+
+
+}
+
+.link-block:hover{
+  background-color: #27A1FC;
+  color: white;
+}
+
+.top-item{
+  background-image: url("./joinTelegram.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  flex:10;
+}
+.bottom-item{
+  flex:1;
+}
+
+.presentazione{                                                /*video*/
+
   margin-left: auto;
   margin-right: auto;
   justify-content: space-evenly;
