@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="stileScudo.css">
+  <script>
+    function menuOnClick() {                                                   /*taskbar*/
+      document.getElementById("menu-bar").classList.toggle("change");
+      document.getElementById("nav").classList.toggle("change");
+      document.getElementById("menu-bg").classList.toggle("change-bg");
+    }
+  
+  </script>
+  
+</head>
+</body>
+<div class="logo">
+  <a href="index.html">
+        <img class="animazione" src="animazLogoScudo.gif" alt="logoAnim" height="170" width="170">          
+  </a>
+</div>
+
+
+
+<div><h1>Presentazione</h1>
+</div>
+<div class="presentazione">
+  <embed src="./src/Project_Scudo.pdf" width="1000" height="600" 
+ type="application/pdf">
+</div>
+
+
+<div class="menu-bg" id="menu-bg"></div>
+<div id="menu">
+  <div id="menu-bar" onclick="menuOnClick()">
+    <div id="bar1" class="bar"></div>
+    <div id="bar2" class="bar"></div>
+    <div id="bar3" class="bar"></div>
+  </div>
+  <nav class="nav" id="nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="scudoPresentazione.html">Presentazione</a></li>
+      <li><a href="scudoAbout.html">About Us</a></li>
+      <li><a href="scudoTelegram.html">Telegram</a></li>
+      
+    </ul>
+  </nav> 
+</div>
+
+</body>
+</html>
