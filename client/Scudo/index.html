@@ -24,10 +24,6 @@
 
 
     setInterval(() => {
-      /*farinella è bello :)*/
-      /*Grazie ti amo :)*/
-      /*console.log(getDb());*/
-      console.log(JSON.stringify(current));
       hum.innerHTML=current.hum+ "%"
       temp.innerHTML=current.temp+"°C"
       light.innerHTML=current.light+"%"
@@ -112,7 +108,7 @@
 </head>
 <body>
 <div class="mainPane">
-  <div class="logo">
+  <div class="logo fade-in">
     <a href="index.html">
           <img class="animazione" src="animazLogoScudo.gif" alt="logoAnim" height="170" width="170">          
     </a>
@@ -150,22 +146,23 @@
 </div>
 
 
+
 <div class="menu-bg" id="menu-bg"></div>
-      <div id="menu">
-        <div id="menu-bar" onclick="menuOnClick()">
-          <div id="bar1" class="bar"></div>
-          <div id="bar2" class="bar"></div>
-          <div id="bar3" class="bar"></div>
-        </div>
-        <nav class="nav" id="nav">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="scudoVideo.html">Video</a></li>
-            <li><a href="scudoAbout.html">About Us</a></li>
-            <li><a href="scudoTelegram.html">Telegram</a></li>
-          </ul>
-        </nav> 
-      </div>
+<div id="menu">
+  <div id="menu-bar" onclick="menuOnClick()">
+    <div id="bar1" class="bar"></div>
+    <div id="bar2" class="bar"></div>
+    <div id="bar3" class="bar"></div>
+  </div>
+  <nav class="nav" id="nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="scudoVideo.html">Video</a></li>
+      <li><a href="scudoAbout.html">About Us</a></li>
+      <li><a href="scudoTelegram.html">Telegram</a></li>
+    </ul>
+  </nav> 
+</div>
 
 </body>
 </html>  

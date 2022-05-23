@@ -24,22 +24,22 @@
       zeroR.innerHTML=" luce: "+temps[0].light+"%"
       unoG.innerHTML=temps[1].time
       unoR.innerHTML=" luce: "+temps[1].light+"%"
-      dueG.innerHTML=temps[0].time
-      dueR.innerHTML=" luce: "+temps[0].light+"%"
-      treG.innerHTML=temps[0].time
-      treR.innerHTML=" luce: "+temps[0].light+"%"
-      quatG.innerHTML=temps[0].time
-      quatR.innerHTML=" luce: "+temps[0].light+"%"
-      cinG.innerHTML=temps[0].time
-      cinR.innerHTML=" luce: "+temps[0].light+"%"
-      seiG.innerHTML=temps[0].time
-      seiR.innerHTML=" luce: "+temps[0].light+"%"
-      setG.innerHTML=temps[0].time
-      setR.innerHTML=" luce: "+temps[0].light+"%"
-      ottG.innerHTML=temps[0].time
-      ottR.innerHTML=" luce: "+temps[0].light+"%"
-      novG.innerHTML=temps[0].time
-      novR.innerHTML=" luce: "+temps[0].light+"%"
+      dueG.innerHTML=temps[2].time
+      dueR.innerHTML=" luce: "+temps[2].light+"%"
+      treG.innerHTML=temps[3].time
+      treR.innerHTML=" luce: "+temps[3].light+"%"
+      quatG.innerHTML=temps[4].time
+      quatR.innerHTML=" luce: "+temps[4].light+"%"
+      cinG.innerHTML=temps[5].time
+      cinR.innerHTML=" luce: "+temps[5].light+"%"
+      seiG.innerHTML=temps[6].time
+      seiR.innerHTML=" luce: "+temps[6].light+"%"
+      setG.innerHTML=temps[7].time
+      setR.innerHTML=" luce: "+temps[7].light+"%"
+      ottG.innerHTML=temps[8].time
+      ottR.innerHTML=" luce: "+temps[8].light+"%"
+      novG.innerHTML=temps[9].time
+      novR.innerHTML=" luce: "+temps[9].light+"%"
       /*
       due.innerHTML = temps[2].time+" luce: "+temps[2].light+"%"
       tre.innerHTML = temps[3].time+" luce: "+temps[3].light+"%"
@@ -49,21 +49,18 @@
       set.innerHTML = temps[7].time+" luce: "+temps[7].light+"%"
       ott.innerHTML = temps[8].time+" luce: "+temps[8].light+"%"
       nov.innerHTML = temps[9].time+" luce: "+temps[9].light+"%"*/
-    
-      console.log(temps)
+
     }, 1000);
 
 
   </script>
 </head>
 <body>
+  <div class="logo">
     <a href="index.html">
-        <div class="logo">
-          <h1>
-            <img class="animazione" src="animazLogoScudo.gif" alt="logoAnim" height="170" width="170">          
-          </h1>
-        </div>
-      </a>
+          <img class="animazione" src="animazLogoScudo.gif" alt="logoAnim" height="170" width="170">          
+    </a>
+  </div>
 <p><h1>STORICO LUCE</h1></p>
   
 <table class="tabella">
@@ -117,21 +114,21 @@
 
 
 <div class="menu-bg" id="menu-bg"></div>
-      <div id="menu">
-        <div id="menu-bar" onclick="menuOnClick()">
-          <div id="bar1" class="bar"></div>
-          <div id="bar2" class="bar"></div>
-          <div id="bar3" class="bar"></div>
-        </div>
-        <nav class="nav" id="nav">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="scudoVideo.html">Video</a></li>
-            <li><a href="scudoAbout.html">About Us</a></li>
-            <li><a href="scudoTelegram.html">Telegram</a></li>
-          </ul>
-        </nav> 
-      </div>
+<div id="menu">
+  <div id="menu-bar" onclick="menuOnClick()">
+    <div id="bar1" class="bar"></div>
+    <div id="bar2" class="bar"></div>
+    <div id="bar3" class="bar"></div>
+  </div>
+  <nav class="nav" id="nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="scudoVideo.html">Video</a></li>
+      <li><a href="scudoAbout.html">About Us</a></li>
+      <li><a href="scudoTelegram.html">Telegram</a></li>
+    </ul>
+  </nav> 
+</div>
 
 </body>
 </html>

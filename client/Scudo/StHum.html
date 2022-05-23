@@ -24,22 +24,22 @@
       zeroR.innerHTML=" umidità: "+temps[0].hum+"%"
       unoG.innerHTML=temps[1].time
       unoR.innerHTML=" umidità: "+temps[1].hum+"%"
-      dueG.innerHTML=temps[0].time
-      dueR.innerHTML=" umidità: "+temps[0].hum+"%"
-      treG.innerHTML=temps[0].time
-      treR.innerHTML=" umidità: "+temps[0].hum+"%"
-      quatG.innerHTML=temps[0].time
-      quatR.innerHTML=" umidità: "+temps[0].hum+"%"
-      cinG.innerHTML=temps[0].time
-      cinR.innerHTML=" umidità: "+temps[0].hum+"%"
-      seiG.innerHTML=temps[0].time
-      seiR.innerHTML=" umidità: "+temps[0].hum+"%"
-      setG.innerHTML=temps[0].time
-      setR.innerHTML=" umidità: "+temps[0].hum+"%"
-      ottG.innerHTML=temps[0].time
-      ottR.innerHTML=" umidità: "+temps[0].hum+"%"
-      novG.innerHTML=temps[0].time
-      novR.innerHTML=" umidità: "+temps[0].hum+"%"
+      dueG.innerHTML=temps[2].time
+      dueR.innerHTML=" umidità: "+temps[2].hum+"%"
+      treG.innerHTML=temps[3].time
+      treR.innerHTML=" umidità: "+temps[3].hum+"%"
+      quatG.innerHTML=temps[4].time
+      quatR.innerHTML=" umidità: "+temps[4].hum+"%"
+      cinG.innerHTML=temps[5].time
+      cinR.innerHTML=" umidità: "+temps[5].hum+"%"
+      seiG.innerHTML=temps[6].time
+      seiR.innerHTML=" umidità: "+temps[6].hum+"%"
+      setG.innerHTML=temps[7].time
+      setR.innerHTML=" umidità: "+temps[7].hum+"%"
+      ottG.innerHTML=temps[8].time
+      ottR.innerHTML=" umidità: "+temps[8].hum+"%"
+      novG.innerHTML=temps[9].time
+      novR.innerHTML=" umidità: "+temps[9].hum+"%"
       /*
       due.innerHTML = temps[2].time+" umidità: "+temps[2].hum+"%"
       tre.innerHTML = temps[3].time+" umidità: "+temps[3].hum+"%"
@@ -49,21 +49,16 @@
       set.innerHTML = temps[7].time+" umidità: "+temps[7].hum+"%"
       ott.innerHTML = temps[8].time+" umidità: "+temps[8].hum+"%"
       nov.innerHTML = temps[9].time+" umidità: "+temps[9].hum+"%"*/
-    
-      console.log(temps)
     }, 1000);
 
 
   </script>
 </head>
-<body>
-<a href="index.html">
-    <div class="logo">
-      <h1>
+<div class="logo">
+  <a href="index.html">
         <img class="animazione" src="animazLogoScudo.gif" alt="logoAnim" height="170" width="170">          
-      </h1>
-    </div>
   </a>
+</div>
 <p><h1>STORICO UMIDITA'</h1></p>
   
 <table class="tabella">
@@ -114,21 +109,22 @@
 
 
 <div class="menu-bg" id="menu-bg"></div>
-      <div id="menu">
-        <div id="menu-bar" onclick="menuOnClick()">
-          <div id="bar1" class="bar"></div>
-          <div id="bar2" class="bar"></div>
-          <div id="bar3" class="bar"></div>
-        </div>
-        <nav class="nav" id="nav">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="scudoVideo.html">Video</a></li>
-            <li><a href="scudoAbout.html">About Us</a></li>
-            <li><a href="scudoTelegram.html">Telegram</a></li>
-          </ul>
-        </nav> 
-      </div>
-
+<div id="menu">
+  <div id="menu-bar" onclick="menuOnClick()">
+    <div id="bar1" class="bar"></div>
+    <div id="bar2" class="bar"></div>
+    <div id="bar3" class="bar"></div>
+  </div>
+  <nav class="nav" id="nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="scudoVideo.html">Video</a></li>
+      <li><a href="scudoAbout.html">About Us</a></li>
+      <li><a href="scudoTelegram.html">Telegram</a></li>
+      
+    </ul>
+  </nav> 
+</div>
+  
 </body>
 </html>

@@ -23,22 +23,22 @@
       zeroR.innerHTML=" temperatura: "+temps[0].temp+"°C"
       unoG.innerHTML=temps[1].time
       unoR.innerHTML=" temperatura: "+temps[1].temp+"°C"
-      dueG.innerHTML=temps[0].time
-      dueR.innerHTML=" temperatura: "+temps[0].temp+"°C"
-      treG.innerHTML=temps[0].time
-      treR.innerHTML=" temperatura: "+temps[0].temp+"°C"
-      quatG.innerHTML=temps[0].time
-      quatR.innerHTML=" temperatura: "+temps[0].temp+"°C"
-      cinG.innerHTML=temps[0].time
-      cinR.innerHTML=" temperatura: "+temps[0].temp+"°C"
-      seiG.innerHTML=temps[0].time
-      seiR.innerHTML=" temperatura: "+temps[0].temp+"°C"
-      setG.innerHTML=temps[0].time
-      setR.innerHTML=" temperatura: "+temps[0].temp+"°C"
-      ottG.innerHTML=temps[0].time
-      ottR.innerHTML=" temperatura: "+temps[0].temp+"°C"
-      novG.innerHTML=temps[0].time
-      novR.innerHTML=" temperatura: "+temps[0].temp+"°C"
+      dueG.innerHTML=temps[2].time
+      dueR.innerHTML=" temperatura: "+temps[2].temp+"°C"
+      treG.innerHTML=temps[3].time
+      treR.innerHTML=" temperatura: "+temps[3].temp+"°C"
+      quatG.innerHTML=temps[4].time
+      quatR.innerHTML=" temperatura: "+temps[4].temp+"°C"
+      cinG.innerHTML=temps[5].time
+      cinR.innerHTML=" temperatura: "+temps[5].temp+"°C"
+      seiG.innerHTML=temps[6].time
+      seiR.innerHTML=" temperatura: "+temps[6].temp+"°C"
+      setG.innerHTML=temps[7].time
+      setR.innerHTML=" temperatura: "+temps[7].temp+"°C"
+      ottG.innerHTML=temps[8].time
+      ottR.innerHTML=" temperatura: "+temps[8].temp+"°C"
+      novG.innerHTML=temps[9].time
+      novR.innerHTML=" temperatura: "+temps[9].temp+"°C"
       /*
       due.innerHTML = temps[2].time+" temperatura: "+temps[2].temp+"°C"
       tre.innerHTML = temps[3].time+" temperatura: "+temps[3].temp+"°C"
@@ -48,8 +48,7 @@
       set.innerHTML = temps[7].time+" temperatura: "+temps[7].temp+"°C"
       ott.innerHTML = temps[8].time+" temperatura: "+temps[8].temp+"°C"
       nov.innerHTML = temps[9].time+" temperatura: "+temps[9].temp+"°C"*/
-    
-      console.log(temps)
+
     }, 1000);
 
 
@@ -58,13 +57,11 @@
   
 </head>
 <body>
+  <div class="logo">
     <a href="index.html">
-      <div class="logo">
-        <h1>
           <img class="animazione" src="animazLogoScudo.gif" alt="logoAnim" height="170" width="170">          
-        </h1>
-      </div>
     </a>
+  </div>
     <h1 class="titolo">STORICO TEMPERATURA</h1>
 
   <table class="tabella">
@@ -133,21 +130,21 @@
 
 
 <div class="menu-bg" id="menu-bg"></div>
-      <div id="menu">
-        <div id="menu-bar" onclick="menuOnClick()">
-          <div id="bar1" class="bar"></div>
-          <div id="bar2" class="bar"></div>
-          <div id="bar3" class="bar"></div>
-        </div>
-        <nav class="nav" id="nav">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="scudoVideo.html">Video</a></li>
-            <li><a href="scudoAbout.html">About Us</a></li>
-            <li><a href="scudoTelegram.html">Telegram</a></li>
-          </ul>
-        </nav> 
-      </div>
+<div id="menu">
+  <div id="menu-bar" onclick="menuOnClick()">
+    <div id="bar1" class="bar"></div>
+    <div id="bar2" class="bar"></div>
+    <div id="bar3" class="bar"></div>
+  </div>
+  <nav class="nav" id="nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="scudoVideo.html">Video</a></li>
+      <li><a href="scudoAbout.html">About Us</a></li>
+      <li><a href="scudoTelegram.html">Telegram</a></li>
+    </ul>
+  </nav> 
+</div>
 
 </body>
 </html>
