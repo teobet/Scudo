@@ -67,8 +67,11 @@ min-width: 12vw;
 padding: 3rem;
 box-shadow: 10px 10px #6d6c6c;
 border-radius: 25px;
+transition: background-color 0.5s,
+            box-shadow 0.5s,
+            transform 0.5s;
+}   
 
-} 
 .box:hover {                                /*box info hover*/
   /* Grow */
 display: inline-block;
@@ -133,6 +136,7 @@ body{
 }
 .bottom-item{
   flex:1;
+  font-size: 1.5vw;
 }
 
 .presentazione{                                                /*video*/
